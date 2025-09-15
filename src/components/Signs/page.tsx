@@ -3,10 +3,10 @@ import { memo } from "react";
 
 const Signs = () => {
   const handleSignIn = () => {
-    open("http://localhost:5173/login");
+    open("https://e-commerse-eight-brown.vercel.app/login");
   };
   const handleSignUp = () => {
-    open("http://localhost:5173/register");
+    open("https://e-commerse-eight-brown.vercel.app/register");
   };
   return (
     <div className="flex gap-[1rem] items-center">
