@@ -2,18 +2,29 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FC, memo } from "react";
+import icon from "@/components/product-view/assets/image.png";
 
-const ProductImage:FC<{title: string, image: string, id: number}> = (props) => {
-    const {title, image, id} = props
-    const router = useRouter()
+interface Props {
+  title: string;
+  image: string;
+  id: number;
+}
+
+const ProductImage: FC<Props> = ({ title, image, id }) => {
+  const router = useRouter();
+
+  const card = image && image.length > 0 
+    ? `https://api.errorchi.uz/product/image/${image}` 
+    : icon;
+
   return (
-    <div>
+    <div className="relative w-full h-[250px] overflow-hidden rounded-[10px]">
       <Image
-        src={"https://api.errorchi.uz/product/image/" + image}
-        width={300}
+        src={card}
+        fill
         alt={title}
-        height={300}
-        onClick={()=> router.push(`/product/${id}`)}
+        className="object-cover cursor-pointer rounded-[10px] hover:scale-104 duration-300"
+        onClick={() => router.push(`/product/${id}`)}
       />
     </div>
   );

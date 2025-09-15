@@ -1,20 +1,29 @@
-'use client'
-import Link from 'next/link';
-import { memo } from 'react';
+import { memo } from "react";
+import {LINKS} from "@/components/header/LINKS/page"
+import GoHome from "@/components/go-home/page"
+import Signs from "@/components/Signs/page"
 
 const Header = () => {
-  const handleSignIn = () => {
-    open("http://localhost:5173/login")
-  }
   return (
-    <div className="p-8 bg-slate-300">
-      <h2>Header</h2>
-      <Link href={"/"}>Home</Link>
-      <Link href={"/about"}>About</Link>
-      <Link href={"/contact"}>Contact</Link>
-      <Link href={"/login"}>Login</Link>
-      <button onClick={handleSignIn}>sign in</button>
-    </div>
+    <header className="py-[26px] bg-white sticky top-0 z-10 shadow-md">
+      <nav className="container flex items-center justify-between">
+        <div className="flex items-center gap-[50px]">
+          <GoHome/>
+          <ul className="flex items-center gap-[50px] max-[940px]:hidden">
+            {
+              LINKS.map((item : any, inx: any) => (
+                <li key={inx} className="font-medium">
+                  <a href="#">
+                    <span>{item}</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <Signs/>
+      </nav>
+    </header>
   );
 };
 

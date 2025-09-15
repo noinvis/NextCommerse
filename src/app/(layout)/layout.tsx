@@ -6,8 +6,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="Layout">
       <Header />
-      {children}
-      <Footer />
+      <div className="bg-white text-black pb-[50px]">
+        {children}
+      </div>
+      <Footer/>
     </div>
   );
 };

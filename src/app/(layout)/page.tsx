@@ -7,10 +7,8 @@ const Home = async() => {
   
   return (
     <div className="container mx-auto">
-      {/* <Hero/> */}
+      <p className='text-center text-[30px] py-[1rem]'>Products</p>
       <ProductView data={data?.data?.allProducts}/>
-      {/* <Testimonials/>
-      <Service/> */}
     </div>
   );
 };
