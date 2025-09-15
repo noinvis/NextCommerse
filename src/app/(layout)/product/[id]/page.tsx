@@ -11,7 +11,7 @@ const Detail = async ({ params }: { params: Promise<{ id: string }> }) => {
   console.log(product);
   
   const card = product && product.images.length > 0 
-    ? `"https://api.errorchi.uz/product/image/" + product?.images[0]` 
+    ? `https://api.errorchi.uz/product/image/${product.images[0]}`
     : icon;
   return (
     <>
