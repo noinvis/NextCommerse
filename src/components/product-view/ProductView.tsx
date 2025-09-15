@@ -2,6 +2,8 @@ import { FC, memo } from 'react';
 import ProductImage from './ProductImage';
 
 const ProductView:FC<{data: any[]}> = ({data}) => {
+  console.log(data);
+  
   return (
     <div className="grid grid-cols-4 gap-4">
        {data?.map((item: any) => {
