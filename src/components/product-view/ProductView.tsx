@@ -5,7 +5,7 @@ const ProductView:FC<{data: any[]}> = ({data}) => {
   console.log(data);
   
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-4 gap-4 max-[1120px]:grid-cols-3 max-[950px]:grid-cols-2 max-[620px]:grid-cols-1">
        {data?.map((item: any) => {
           return (
             <div key={item.id} className="bg-white p-4 shadow-md rounded-lg hover:shadow-xl">
