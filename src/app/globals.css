@@ -1,7 +1,23 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Integral";
+  src: url("/src/components/fonts/Fontspring-DEMO-integralcf-regular.otf");
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/src/components/fonts/Satoshi-Regular.otf");
+}
+
+.satoshi{
+  font-family: "Satoshi";
+}
+.integral{
+  font-family: "Satoshi";
+}
+
 .container{
-  max-width: 1460px;
+  max-width: 1270px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -11,4 +27,24 @@
 *{
   user-select: none;
   scroll-behavior: smooth;
+}
+
+.brands-carousel {
+  display: flex;
+  flex: 0, 0, 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.brands-group {
+  will-change: transform;
+  animation: scrolling 10s linear infinite;
+}
+@keyframes scrolling {
+  0% {
+    transform: translateX(135%);
+  }
+  100% {
+    transform: translateX(-135%);
+  }
 }

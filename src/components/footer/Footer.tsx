@@ -1,15 +1,15 @@
 import Image from 'next/image';
 import { memo } from 'react';
-import img from "@/components/header/assets/Frame.svg";
+import img from "@/components/header/assets/shop.svg";
 import {LINK2, LINK3, LINK4} from "@/components/header/LINKS/page"
 
 const Footer = () => {
   return (
-    <footer className='bg-[#F5F3EE] pt-[40px]'>
+    <footer className='bg-[#F5F3EE] pt-[40px] mt-[50px]'>
       <div className='container grid grid-cols-4 gap-[1rem] max-[880px]:grid-cols-2 max-[500px]:grid-cols-1 max-[500px]:gap-[24px]'>
         <div>
           <Image width={100} height={100} src={img} alt={"icon"} />
-          <p className='font-medium'>Trust but Verify!</p>
+          <p className='text-[14px] text-[#00000099] mt-[20px]'>We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
         </div>
         <div>
           <ul className='flex flex-col gap-[10px]'>

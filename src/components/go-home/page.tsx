@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import { memo } from 'react';
-import img from "@/components/header/assets/Frame.svg";
+import img from "@/components/header/assets/shop.svg";
 import { useRouter } from 'next/navigation';
 
 
