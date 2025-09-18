@@ -4,7 +4,7 @@ import Hero from './hero/Hero';
 import BrandAnimate from '@/components/brand-animate/BrandAnimate';
 
 const Home = async() => {
-  const response = await fetch("https://api.errorchi.uz/product?limit=8", {next: {revalidate: 60}})
+  const response = await fetch("https://api.errorchi.uz/product?limit=8", {next: {revalidate: 60 * 5}})
   const data = await response.json()
   
   return (
