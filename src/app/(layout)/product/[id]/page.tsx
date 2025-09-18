@@ -3,13 +3,28 @@ import { memo } from "react";
 import Previous from "@/components/previous/Page";
 import icon from "@/components/product-view/assets/image.png";
 import stars from "@/components/assets/Frame 35.png";
+import { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: Promise<{id: string}>
+}
+export async function generateMetadata(
+  {params}: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const id = (await params).id
+
+   return {
+    title: `Product ${id} - SHOP.CO`,
+    description: `Details about product ${id}`,
+  };
+}
 
 const Detail = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
   const response = await fetch(`https://api.errorchi.uz/product/${id}`);
   const data = await response.json();
   const product = data?.data;
-  console.log(product);
 
   const card =
     product && product.images.length > 0
@@ -38,7 +53,7 @@ const Detail = async ({ params }: { params: Promise<{ id: string }> }) => {
                 -50%
               </span>
             </div>
-            <p className="font-medium text-[#00000099] py-[10px]">{product.description}</p>
+            <p className="font-medium text-[#00000099] py-[10px]">{product?.description}</p>
             <div className="w-full h-[1px] bg-[#0000001A] my-[10px]"></div>
             <p className="text-[#00000099] py-[10px]">
               Select Colors
