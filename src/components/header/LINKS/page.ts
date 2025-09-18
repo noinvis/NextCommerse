@@ -1,4 +1,5 @@
 export const LINKS = ["Shop", "On Sale", "New Arrivals", "Brands"];
-export const LINK2 = ["Products", "Connect", "Optimize", "Pricing"];
-export const LINK3 = ["Developers", "API reference", "Getting started"];
-export const LINK4 = ["Company", "About us", "Blog", "Contact us"];
+export const LINK2 = ["About", "Features", "Works", "Career"];
+export const LINK3 = ["Customer Support", "Delivery Details", "Terms & Conditions", "Privacy Policy"];
+export const LINK4 = ["Account", "Manage Deliveries", "Orders", "Payments"];
+export const LINK5 = ["Free eBooks", "Development Tutorial", "How to - Blog", "Youtube Playlist"];
