@@ -27,12 +27,12 @@ const Detail = async ({ params }: { params: Promise<{ id: string }> }) => {
             <Image src={card} width={445} alt={product?.title} height={530} />
           </div>
           <div className="w-[50%]">
-            <p className="text-[40px] font-bold">{product.title}</p>
+            <p className="text-[40px] font-bold">{product?.title}</p>
             <Image src={stars} alt="stars" className="py-[10px]" />
             <div className="flex items-center gap-2">
-              <p className="font-bold text-[32px]">${product.price}</p>
+              <p className="font-bold text-[32px]">${product?.price ?? "0"}</p>
               <p className="text-[32px] font-bold text-[#0000004D] line-through">
-                ${product.price * 2}
+                ${product?.price * 2}
               </p>
               <span className="bg-[#FF33331A] text-[#FF3333] rounded-[62px] text-[12px] font-medium py-[5px] px-4">
                 -50%
