@@ -34,11 +34,20 @@ const Profile = () => {
   }, []);
 
   if (loading) {
-    return <div className="loader"></div>;
+    return <div className="h-[70vh] flex justify-center items-center">
+      <div className="loader"></div>;
+      </div>
   }
   return (
     <section className="container">
-      <div></div>
+      <div>
+        <p>{user?.fname}</p>
+        <p>{user?.lname}</p>
+        <p>{user?.address}</p>
+        <p>{user?.email}</p>
+        <p>{user?.role}</p>
+
+      </div>
     </section>
   );
 };
