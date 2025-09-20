@@ -24,9 +24,9 @@ const VerifySection = ({ user }: { user: string }) => {
   }, []);
 
   return (
-    <div className="w-full h-screen grid place-items-center">
-      <div className="text-center">
-        <h2 className="text-4xl">Varifying...</h2>
+    <div className="w-full h-screen flex justify-center place-items-center">
+      <div className="loader">
+      </div>
         {error && (
           <div>
             <button
@@ -37,7 +37,6 @@ const VerifySection = ({ user }: { user: string }) => {
             </button>
           </div>
         )}
-      </div>
     </div>
   );
 };
