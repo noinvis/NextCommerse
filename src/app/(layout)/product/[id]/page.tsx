@@ -67,11 +67,11 @@ const Detail = async ({ params }: { params: Promise<{ id: string }> }) => {
               </button>
             </div>
             <div className="flex items-center gap-3 mt-[20px]">
-              <button className="w-full py-[10px] border rounded-xl bg-[#141414] text-white cursor-pointer">
-                Add to cart
-              </button>
               <button className="w-full py-[10px] border rounded-xl border-gray-400 cursor-pointer">
                 Checkout now
+              </button>
+              <button className="w-full py-[10px] border rounded-xl bg-[#141414] text-white cursor-pointer">
+                Add to cart
               </button>
             </div>
           </div>

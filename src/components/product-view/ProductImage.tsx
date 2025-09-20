@@ -18,7 +18,7 @@ const ProductImage: FC<Props> = ({ title, image, id }) => {
     : icon;
 
   return (
-    <div className="relative w-full h-[250px] overflow-hidden rounded-[10px]">
+    <div className="relative w-full h-[250px] overflow-hidden rounded-[10px] bg-[#F0EEED]">
       <Image
         src={card}
         fill
