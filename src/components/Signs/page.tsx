@@ -1,5 +1,6 @@
 "use client";
 import { CircleUserRound, ShoppingCart } from "lucide-react";
+import Link from "next/link";
 import { memo } from "react";
 
 const Signs = () => {
@@ -11,9 +12,9 @@ const Signs = () => {
       <button className="cursor-pointer">
         <ShoppingCart />
       </button>
-      <button className="cursor-pointer">
+      <Link href={"/profile"} className="cursor-pointer">
         <CircleUserRound />
-      </button>
+      </Link>
       <button
         onClick={handleSignIn}
         className="border hover:bg-white bg-black text-white duration-300 cursor-pointer px-[20px] py-[7px] hover:text-black rounded-[12px]"
